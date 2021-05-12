@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lecturizer</title>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+
+      crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav class="grey darken-4" role="navigation">
+        <div class="nav-wrapper container"> <a id="logo-container" href="#" class="brand-logo">Lecturizer</a>
+          <ul class="right hide-on-med-and-down">
+             <li><a href="{{url_for('index')}}">Home</a></li>
+      <li><a href="{{url_for('compare_summary')}}">Compare Sumarizers</a></li>
+      <li><a href="{{url_for('youtube1')}}">Youtube Time-Stamp Extractor</a></li>
+      <li><a href="{{url_for('stars')}}">Please Review us</a></li>
+      <li><a href="#aboutapp">About</a></li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+    </div>
+    <ul id="nav-mobile" class="sidenav">
+       <li><a href="{{url_for('index')}}">Home</a></li>
+      <li><a href="{{url_for('compare_summary')}}">Compare Summarizer</a></li>
+      <li><a href="{{url_for('youtube1')}}">Youtube Time-Stamp Extractor</a></li>
+      <li><a href="{{url_for('stars')}}">Please Review us</a></li>
+      <li><a href="#contactme">About</a></li>
+    </ul>
+    <!--Slider -->
+    <section class="slider">
+      <div id="index-banner" class="parallax-container">
+        <ul class="slides">
+          <li> <br>
+            <div class="caption center-align">
+              <h2>Summarization Simplified</h2>
+              <h5 class="light grey-text text-lighten-3 hide-on-small-only">
+                Using SpaCy,Gensim,NLTK and Sumy </h5>
+              <div class="row center"> <a href="{{url_for('index')}}"
+
+                  id="download-button" class="btn-large waves-effect waves-light blue lighten-1">Refresh</a>
+              </div>
+            </div>
+          </li>
+          <li><br>
+            <script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script>
+            <script language="JavaScript">
+						function TryClear(){
+						Length = document.all.TextFields.Input.value.length;
+						FirstSumbol = true;
+						CancelExit =false;
+						var strOut = "";
+
+						for(i=0; i<Length; i++){
+						ch = document.all.TextFields.Input.value.substring(i,i+1);
+						if(FirstSumbol){
+						if(ch >= '0' && ch <= '9' ){
+						CancelExit =true;
+						FirstSumbol = false;
+						}
+						else {
+						CancelExit =false;
+						strOut += '\n';
+						FirstSumbol = false;
+						}
+						}
+						if(ch == '\n'){
+						FirstSumbol = true;
+						}
+
+						if((!CancelExit) && (!FirstSumbol)){
+						strOut += ch;
+						document.all.TextFields.Output.value = i;
+						}
+						else continue;
+						}
+						document.all.TextFields.Output.value = strOut;
+						return;
+						}</script>
+            <script type="text/javascript">(function (d, w, c) {
+(w[c] = w[c] || []).push(function() {
+try {
+w.yaCounter20669278 = new Ya.Metrika({id: 20669278, enableAll: true});
+w.yaCounter10693645 = new Ya.Metrika({id: 10693645, enableAll: true});
+w.yaCounter15699160 = new Ya.Metrika({id: 15699160, enableAll: true});
+} catch(e) { }
+});
+
+var n = d.getElementsByTagName("script")[0],
+s = d.createElement("script"),
+f = function () { n.parentNode.insertBefore(s, n); };
+s.type = "text/javascript";
+s.async = true;
+s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+if (w.opera == "[object Opera]") {
+d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(document, window, "yandex_metrika_call</script>
+            <div class="caption left-align">
+              <h2>Text Summarizer with SpaCy</h2>
+              <h5 class="light grey-text text-lighten-3 hide-on-small-only"> NLP
+                based App </h5>
+              <a href="#aboutapp" class="btn btn-large waves-effect waves-light light-blue lighten-1">Learn
+                More</a> </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Start -->
+    <h1><br>
+    </h1>
+    <h1><br>
+    </h1>
+    <style>
+    h2{text-align:center ;}
+    </style>
+    <h2>Extract Text Only From Subtitle</h2>
+    <h2>And Remove The Time Stamps</h2>
+    Paste the Sub-Title of which-ever YouTube video you want. Add to Bottom text field and press "Do the
+    job!"<br>
+    <form name="TextFields"> <textarea type="text" cols="67" rows="10" name="Input"
+
+value=""></textarea> <input value="Do the job!" onclick="TryClear();" type="button">
+      <textarea type="text" cols="67" rows="10" name="Output" value=""></textarea>&nbsp;
+      </form>
+    <div class="container">
+      <div class="section"><br>
+      </div>
+      <div class="section"><br>
+        <!--   Icon Section   --></div>
+      <div class="section"><br>
+      </div>
+    </div>
+    <footer class="page-footer grey darken-4">
+      <div class="container" id="aboutapp">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">About Lecturizer App</h5>
+            <p class="grey-text text-lighten-4">Using Spacy,Sumy,NLTk and Gensim
+              for Text Summarization(In The Form Of Notes Of Online Lectures) .</p>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Connect With Us</h5>
+            <ul>
+              <a href="https://www.facebook.com/lecturizer.webapp/" target="_blank"
+
+                class="white-text"> <i class="fab fa-facebook fa-4x"></i> </a>
+              <a href="https://www.instagram.com/lecturizer_web_app/" target="_blank"
+
+                class="white-text"> <i class="fab fa-instagram fa-4x"></i> </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container"> Made by: <br>
+          <a class="white-text text-lighten-3">Hardik Hemant Panchal(1881027)</a><br>
+          <a class="white-text text-lighten-3">Dhruvin Rajesh Patel(1881030)</a><br>
+          <a class="white-text text-lighten-3">Aagam Bharat Shah(1881046)</a>
+        </div>
+      </div>
+    </footer>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="static/js/materialize.js"></script>
+    <script src="static/js/init.js"></script>
+  </body>
+</html>

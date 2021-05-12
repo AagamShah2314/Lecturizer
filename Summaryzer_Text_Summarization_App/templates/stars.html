@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lecturizer</title>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+   <!-- <link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection">-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+
+      crossorigin="anonymous">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav class="grey darken-4" role="navigation">
+        <div class="nav-wrapper container"> <a id="logo-container" href="#" class="brand-logo">Lecturizer</a>
+          <ul class="right hide-on-med-and-down">
+             <li><a href="{{url_for('index')}}">Home</a></li>
+      <li><a href="{{url_for('compare_summary')}}">Compare Sumarizers</a></li>
+      <li><a href="{{url_for('youtube1')}}">Youtube Time-Stamp Extractor</a></li>
+      <li><a href="{{url_for('stars')}}">Please Review us</a></li>
+      <li><a href="#aboutapp">About</a></li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+    </div>
+    <ul id="nav-mobile" class="sidenav">
+       <li><a href="{{url_for('index')}}">Home</a></li>
+      <li><a href="{{url_for('compare_summary')}}">Compare Summarizer</a></li>
+      <li><a href="{{url_for('youtube1')}}">Youtube Time-Stamp Extractor</a></li>
+      <li><a href="{{url_for('stars')}}">Please Review us</a></li>
+      <li><a href="#contactme">About</a></li>
+    </ul>
+    <!--Slider -->
+    <div class="container">
+    <div class="row">
+ 
+<form action="/stars" method="POST">
+ 
+    <div>
+        <h3>Review our Lecturizer</h3>
+        <h3>Describe your experience and the Name of the Summarization Technique in the Comment section, which you liked the most...!</h3>
+    </div>
+ 
+    <div>
+         <label>Name</label>
+        <input type="text" name="name" id="name">
+    </div>
+
+    <div>
+         <label>Comments</label>
+        <input type="text" id="comments" name="comments">
+    </div>
+  
+         <div class="rateyo" id= "rating"
+         data-rateyo-rating="4"
+         data-rateyo-num-stars="5"
+         data-rateyo-score="3">
+         </div>
+ 
+    <span class='result'>0</span>
+    <input type="hidden" name="rating" id="rating">
+ 
+    </div>
+ 
+    <div><input type="submit" name="add"> </div>
+ 
+</form>
+</div>
+</div>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>-->
+ <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<!--<script>-->
+ 
+ 
+    <!--$(function () {
+        $(".rateyo").rateYo().on("rateyo.change", function (e, data) {
+            var rating = data.rating;
+            $(this).parent().find('.score').text('score :'+ $(this).attr('data-rateyo-score'));
+            $(this).parent().find('.result').text('rating :'+ rating);
+            $(this).parent().find('input[name=rating]').val(rating); //add rating value to input field
+        });
+    });*/
+ 
+</script>-->
+
+    
+        <!--   Icon Section   --></div>
+      <div class="section"><br>
+      </div>
+    </div>
+    <footer class="page-footer grey darken-4">
+      <div class="container" id="aboutapp">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">About Lecturizer App</h5>
+            <p class="grey-text text-lighten-4">Using Spacy,Sumy,NLTk and Gensim
+              for Text Summarization(In The Form Of Notes Of Online Lectures) .</p>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Connect With Us</h5>
+            <ul>
+              <a href="https://www.facebook.com/lecturizer.webapp/" target="_blank"
+
+                class="white-text"> <i class="fab fa-facebook fa-4x"></i> </a>
+              <a href="https://www.instagram.com/lecturizer_web_app/" target="_blank"
+
+                class="white-text"> <i class="fab fa-instagram fa-4x"></i> </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container"> Made by: <br>
+          <a class="white-text text-lighten-3">Hardik Hemant Panchal(1881027)</a><br>
+          <a class="white-text text-lighten-3">Dhruvin Rajesh Patel(1881030)</a><br>
+          <a class="white-text text-lighten-3">Aagam Bharat Shah(1881046)</a>
+        </div>
+      </div>
+    </footer>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="static/js/materialize.js"></script>
+    <script src="static/js/init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <script>
+ 
+ 
+    $(function () {
+        $(".rateyo").rateYo().on("rateyo.change", function (e, data) {
+            var rating = data.rating;
+            $(this).parent().find('.score').text('score :'+ $(this).attr('data-rateyo-score'));
+            $(this).parent().find('.result').text('rating :'+ rating);
+            $(this).parent().find('input[name=rating]').val(rating); //add rating value to input field
+        });
+    });
+ 
+</script>
+  </body>
+</html>
